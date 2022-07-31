@@ -21,7 +21,7 @@ If brew is not installed, before running the above command, run this command on 
 - Load and start the MySQL service : `$ brew services start mysql`  
 Expected output : **Successfully started `mysql` (label: homebrew.mxcl.mysql)**
     
-    The `brew services start mysql` - instruction is equivalent to :
+    The `brew services start mysql` instruction is equivalent to :
     
     ```
     $ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
@@ -32,3 +32,9 @@ Expected output : **Successfully started `mysql` (label: homebrew.mxcl.mysql)
 - Check if the MySQL service has been loaded : `$ brew services list`
 - Verify the installed MySQL instance : `$ mysql -V`.  
 - To stop the MySQL service : `$ brew services stop mysql`
+
+## Rules in MySQL
+
+- Keywords aren't case-sensitive. Can be written in all-caps, all lower case, or combination of upper and lower case. Although it is **best practice to write them in uppercase**.   
+- If you want to write 2 different SQL queries in a single file, you need semicolon(**;**) to separate them.
+- To write a string in SQL, write it inside single-quotes(**‘‘**) quotes to distinguish it from keywords. eg - ‘string’
