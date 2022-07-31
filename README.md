@@ -8,7 +8,7 @@
 
 ## Installing MySQl(MacOS)
 
-- To install MySQL enter this command on terminal : ```$ brew install mysql```  
-If brew is not installed, before running the above command, run this command on Terminal - ```$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+- To install MySQL enter this command on terminal : `$ brew install mysql`  
+If brew is not installed, before running the above command, run this command on Terminal - `$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 - You'll also need to install MySQLWorkbench, click [here](https://dev.mysql.com/downloads/workbench/) to install.
