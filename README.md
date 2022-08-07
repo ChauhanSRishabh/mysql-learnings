@@ -42,11 +42,12 @@ Expected output : **Successfully started `mysql` (label: homebrew.mxcl.mysql)
 ## Database for a Music Record Company
 
 ### Creating and Dropping a database
+#### CREATE
 ```
-# Creating a Database
 CREATE DATABASE record_company;
-
-# Dropping the Database
+```
+#### DROP
+```
 DROP DATABASE record_company; # something you'll never use as dropping removes all of the data that is inside the database
 ```
 
@@ -69,3 +70,25 @@ USE record_company;
 # Now every SQL query that we write will be executed on this database
 ```
 
+### Create, Alter and Drop a Table
+#### CREATE
+```
+CREATE TABLE test(
+test_column INT
+);
+
+# All the above 3 lines are a single command
+# execute it, refresh, notice there's a table named test inside Tables, inside record_company database
+```
+#### ALTER
+Used to change properties of a table after we've created it.  
+Let's add another column to a table named 'test' that we created.
+```
+ALTER TABLE test
+ADD another_column VARCHAR (255); # VARCHAR is way of telling SQL that the type is String
+# we could have written the above 2 lines as a single line but SQL doesn't care about line breaks in the statement, it just reads it until it sees the ;
+```
+#### DROP
+```
+DROP TABLE test;
+```
