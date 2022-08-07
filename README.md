@@ -39,6 +39,18 @@ Expected output : **Successfully started `mysql` (label: homebrew.mxcl.mysql)
 - If you want to write 2 different SQL queries in a single file, you need semicolon(**;**) to separate them.
 - To write a string in SQL, write it inside single-quotes(**‘‘**) quotes to distinguish it from keywords. eg - ‘string’
 
+### Working with MySQLWorkbench
+**How to execute queries and notice if changes made took effect**
+```
+# ⚡️(executes everything inside the file or what is highlighted) 
+# ⚡️ with a cursor inside(execute statement where the cursor is)
+
+# UI does not refresh on it's own
+# Go to Schemas section on the left
+# Refresh it
+# you'll see record_company database
+```
+
 ## Database for a Music Record Company
 
 ### Creating and Dropping a database
@@ -49,17 +61,6 @@ CREATE DATABASE record_company;
 #### DROP
 ```
 DROP DATABASE record_company; # something you'll never use as dropping removes all of the data that is inside the database
-```
-
-### Working with MySQLWorkbench
-```
-# ⚡️(executes everything inside the file or what is highlighted) 
-# ⚡️ with a cursor inside(execute statement where the cursor is)
-
-# UI does not refresh on it's own
-# Go to Schemas section on the left
-# Refresh it
-# you'll see record_company database
 ```
 
 ### Tell SQL where to run our SQL queries, on which database
@@ -91,4 +92,32 @@ ADD another_column VARCHAR (255); # VARCHAR is way of telling SQL that the type 
 #### DROP
 ```
 DROP TABLE test;
+```
+
+## CRUD Operations
+
+### Working on our record company database
+
+### Primary Key/ID/Auto Increment/Not NULL
+```
+CREATE DATABASE record_company;
+USE record_company;
+
+CREATE TABLE bands (
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) NOT NULL,
+PRIMARY KEY (id)
+);
+```
+- 'id' : What if a band has the same name as another? Use to uniquely a identify a row from other rows
+- AUTO_INCREMENT : We want id to be automatically generated whenever we add a band
+- NOT NULL : to make sure our band always have a name, we specify this keyword
+- PRIMARY KEY (id) : id is going to be the identifier of out table, i.e., the primary identifying column of our table
+
+**MySQLWorkbench**
+```
+# Execute the above written query and then Refresh the schemas section.
+# Notice there's a table named bands inside Tables 
+# and inside bands we have 2 columns for id and name
+# We also have a subsection named Indexes for our PRIMARY KEY which tells SQl that this is what distinguishes our band from the other band records in the table 
 ```
