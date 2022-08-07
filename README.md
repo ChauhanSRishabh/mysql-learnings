@@ -43,12 +43,11 @@ Expected output : **Successfully started `mysql` (label: homebrew.mxcl.mysql)
 
 ### Creating and Dropping a database
 ```
-# Create Database command
+# Creating a Database
 CREATE DATABASE record_company;
 
-# Drop Database command:
-DROP DATABASE record_company;
-# something you'll never use as dropping removes all of the data that is inside the database
+# Dropping the Database
+DROP DATABASE record_company; # something you'll never use as dropping removes all of the data that is inside the database
 ```
 
 ### Working with MySQLWorkbench
@@ -60,5 +59,13 @@ DROP DATABASE record_company;
 # Go to Schemas section on the left
 # Refresh it
 # you'll see record_company database
+```
+
+### Tell SQL where to run our SQL queries, on which database
+```
+USE record_company;
+
+# Execute it with ⚡️ and you'll notice it gets bolded
+# Now every SQL query that we write will be executed on this database
 ```
 
