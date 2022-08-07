@@ -39,8 +39,6 @@ Expected output : **Successfully started `mysql` (label: homebrew.mxcl.mysql)
 - If you want to write 2 different SQL queries in a single file, you need semicolon(**;**) to separate them.
 - To write a string in SQL, write it inside single-quotes(**‘‘**) quotes to distinguish it from keywords. eg - ‘string’
 
-## Database for a Music Record Company
-
 ### Working with MySQLWorkbench
 **How to execute queries and notice if changes made took effect**
 ```
@@ -52,6 +50,8 @@ Expected output : **Successfully started `mysql` (label: homebrew.mxcl.mysql)
 # Refresh it
 # you'll see record_company database
 ```
+
+## Database for a Music Record Company
 
 ### Creating and Dropping a database
 #### CREATE
@@ -98,8 +98,7 @@ DROP TABLE test;
 
 ### Working on our record company database
 
-### CREATE
-#### Primary Key/ID/Auto Increment/Not NULL
+### Primary Key/ID/Auto Increment/Not NULL
 ```
 CREATE DATABASE record_company;
 USE record_company;
